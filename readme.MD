@@ -1,5 +1,15 @@
 # Client Exports
 
+## All Exports
+
+```lua
+exports["LGF_Housing"]:createTemporanyShell(params)
+exports["LGF_Housing"]:deleteTemporanyShell(shellId)
+exports["LGF_Housing"]:initializeAllZones()
+exports["LGF_Housing"]:deleteAllTemporanyShells()
+```
+
+
 ## Crate Temporany Shell
 
 ### Parameters:
@@ -18,7 +28,7 @@ exports["LGF_Housing"]:createTemporanyShell(params)
 
 ## Return Values
 
-The `export` returns three values, which represent:
+The `createTemporanyShell` returns three values, which represent:
 
 - `ShecreatedHouselCreated`: The created house entity `(prop)` in the game world.
 - `interiorObject`: The created interior shell entity inside the house.
@@ -54,7 +64,7 @@ exports["LGF_Housing"]:deleteTemporanyShell(shellId)
 
 ## Return Values
 
-The `export` does not return any values but will print a message indicating the success or failure of the deletion operation. Specifically:
+The `deleteTemporanyShell` does not return any values but will print a message indicating the success or failure of the deletion operation. Specifically:
 
 - If the shell with the provided ID exists and is deleted, it will log: "Temporary shell and interior deleted for ID: [shellId]".
 - If no shell is found with the provided ID, it will log: "No shell found with ID: [shellId]".
@@ -108,8 +118,8 @@ exports["LGF_Housing"]:deleteAllTemporanyShells()
 
 The `deleteAllTemporanyShells` export  does not return any values but will print messages indicating the status of the deletion operation for each temporary shell. Specifically:
 
-- If a temporary shell is successfully deleted, it will log: "Temporary shell and interior deleted for ID: [shellId] during deleteAllTemporanyShells."
-- After deleting all shells, it will log: "All temporary shells have been deleted.
+- If a temporary shell is successfully deleted, it will log: `Temporary shell and interior deleted for ID: [shellId] during deleteAllTemporanyShells.`
+- After deleting all shells, it will log: `All temporary shells have been deleted.`
 
 ## Example Usage
 
