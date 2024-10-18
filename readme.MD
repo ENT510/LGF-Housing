@@ -100,7 +100,7 @@ The `initializeAllZones` export  does not return any values, but it performs the
 ```lua
 AddEventHandler("onResourceStart", function(res)
     if GetCurrentResourceName() == res then
-        InitializeAllZone()
+        exports["LGF_Housing"]:initializeAllZones()
     end
 end)
 ```
